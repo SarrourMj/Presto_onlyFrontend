@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css ">
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Molengo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>PROFILE</title>
+  </head>
+  <body>
+
+    <!-- NAVBAR -->
+     
+    <nav id="navbar" class="navbar navbar-expand  fixed-top d-none d-md-flex .border-custom-bottom">
+      <a class="navbar-brand" href="#"></a>
+     
+    
+      <div class="collapse navbar-collapse" id="navbarsExample02">
+        <img class="img-fluid mr-3" src="media/logo.png" width="100" height="200" >
+        
+        <div class="ml-auto d-none d-md-flex">
+          <button class="btn text-trenta">
+          <i class="fas fa-search mx-1" data-toggle="modal" data-target="#modSearch"></i>
+          </button>
+          <button class="btn text-trenta">
+          <i class="far fa-user mx-1" data-toggle="modal" data-target="#modUser"></i>
+          </button>
+          <button class="btn text-trenta">
+          <i class="far fa-heart mx-1" id="heart"></i>
+          </button>
+          <button class="btn text-trenta">
+          <i id="cart" class="fas fa-shopping-cart mx-1"></i>
+          </button>
+          <button id="menuToggler" class="btn text-trenta">
+            <i class="fas fa-bars mx-1"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+    
+    <div id="menu">
+      <div class="container h-100 py-5 my-5">
+        <div class="row h-100 align-items-center">
+          <div class="col-12 text-center">
+            <h3>VEDI GLI ANNUNCI</h3>
+          </div>
+          <div class="col-12 text-center">
+            <h3>INSERISCI UN ANNUNCIO</h3>
+          </div>
+          <div class="col-12 text-center">
+            <h3>DOVE SIAMO</h3>
+          </div>
+          <div class="col-12 text-center">
+            <h3>LAVORA CON NOI</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HEADER -->
+  
+    <header class="headerProfile mb-5">
+        <div class="container h-100">
+          <div class="row h-100 align-items-center">
+            <div class="col-12 text-center">
+              
+             </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- PROFILE PIC -->
+
+      <div class="container">
+        <div class="span3 well text-center">
+            
+            <a href="#aboutModal" data-toggle="modal" data-target="#myModal"><img src="media/prof.jpg" name="aboutme" width="140" height="140" class="img-fluid profilePic"></a>
+            <h2 class="text-trenta">Gea McEarth</h2>
+            <em class="text-trenta">Clicca sul mio volto per info su di me</em>
+            
+        </div>
+       
+    </div>
+
+     <!-- CARICA NUOVO -->
+
+     <div class="container my-5 py-5">
+         <div class="row">
+             <div class="col-12 d-flex justify-content-center">
+                 <button class="btn bg-custom text-white w-35">Carica un nuovo annuncio</button>
+             </div>
+         </div>
+     </div>
+
+     <!-- ANNUNCI CARICATI -->
+
+     <div class="container py-0 my-0 my-md-5 py-md-5">
+       <div class="row align-items-center">
+        
+         <div class="col-md-12 d-none d-md-flex">
+          <h2 class="text-trenta d-none d-md-flex mb-5">Annunci caricati</h2>
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="card-deck ml-5">
+                  <div class="card shadow position-relative">
+                    
+                  <img src="media/lavrose.webp" class="card-img-top" alt="media/rastrello.jpg">
+                  <div class="card-body mt-3">
+                    <h5 class="card-title">Bouquet handmade <span class="card-text ml-3 float-right"><sup>€</sup>25</span></h5>
+                    <p class="card-text font-weight-bold mt-5">Fiori e Piante</p>
+                    <button class="btn bg-custom text-white w-100 mt-5 btnAdd">Vedi / Modifica</button>
+                  </div>
+                </div>
+                <div class="card shadow position-relative">
+                  
+                <img src="media/stagno.jpg" class="card-img-top" alt="media/rastrello.jpg">
+                <div class="card-body mt-3">
+                  <h5 class="card-title">Stagno con Rane <span class="card-text ml-5 float-right"><sup>€</sup>530</span></h5>
+                  <p class="card-text font-weight-bold mt-5"> Ambienti </p>
+                 
+                  <button class="btn bg-custom text-white w-100 mt-5 btnAdd">Vedi / Modifica</button>
+                </div>
+              </div>
+              <div class="card shadow position-relative">
+                
+              <img src="media/lamponi.jpg" class="card-img-top" alt="media/rastrello.jpg">
+              <div class="card-body mt-3">
+                <h5 class="card-title">Pianta Lamponi <span class="card-text ml-5 float-right"><sup>€</sup>59,99</span></h5>
+                  <p class="card-text font-weight-bold mt-5"> Piante </p>
+                 
+                  <button class="btn bg-custom text-white w-100 mt-5 btnAdd">Vedi / Modifica</button>
+              </div>
+            </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card-deck ml-5">
+                  <div class="card shadow position-relative">
+                    
+                  <img src="media/annaff.webp" class="card-img-top" alt="media/rastrello.jpg">
+                  <div class="card-body mt-3">
+                    <h5 class="card-title">Annaffiatoio<span class="card-text ml-5 float-right"><sup>€</sup>80</span></h5>
+                  <p class="card-text font-weight-bold mt-5"> Giardinaggio </p>
+                 
+                  <button class="btn bg-custom text-white w-100 mt-5 btnAdd">Vedi / Modifica</button>
+                  </div>
+                </div>
+                <div class="card shadow position-relative">
+                  
+                <img src="media/colf.webp" class="card-img-top" alt="media/rastrello.jpg">
+                <div class="card-body mt-3">
+                  <h5 class="card-title">Colf personale <span class="card-text ml-5 float-right"><sup>€</sup>15/<sub>mese</sub></span></h5>
+                  <p class="card-text font-weight-bold mt-5"> Giardinaggio </p>
+                 
+                  <button class="btn bg-custom text-white w-100 mt-5 btnAdd">Vedi / Modifica</button>
+                </div>
+              </div>
+              <div class="card shadow position-relative">
+                
+              <img src="media/terra.webp" class="card-img-top" alt="media/rastrello.jpg">
+              <div class="card-body mt-3">
+                <h5 class="card-title">Terra per giardino <span class="card-text ml-5 float-right"><sup>€</sup>30</span></h5>
+                <p class="card-text font-weight-bold mt-5"> Ambienti </p>
+               
+                <button class="btn bg-custom text-white w-100 mt-5 btnAdd">Vedi / Modifica</button>
+              </div>
+            </div>
+                </div>
+              </div>
+              
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+         </div>
+       </div>
+     </div>
+
+     <div class="container py-5 my-5 py-md-0 my-md-0">
+       <div class="row">
+         <div class="col-12 d-md-none">
+          <h2 class="text-trenta text-center">Annunci caricati</h2>
+          <hr class="hrfooter">
+          <div id="carouselMobile" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="card shadow position-relative">
+                  
+                <img src="media/rastrello.jpg" class="card-img-top" alt="media/rastrello.jpg">
+                <div class="card-body mt-3">
+                  <h5 class="card-title">Rastrello <span class="card-text float-right"><sup>€</sup>30</span></h5>
+                  <p class="card-text mt-4">Categoria </p>
+                  <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
+                  <button class="btn bg-custom text-white w-100 mt-4 btnAdd">Aggiungi</button>
+                </div>
+              </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card shadow position-relative">
+                  
+                <img src="media/rastrello.jpg" class="card-img-top" alt="media/rastrello.jpg">
+                <div class="card-body mt-3">
+                  <h5 class="card-title">Rastrello <span class="card-text float-right"><sup>€</sup>30</span></h5>
+                  <p class="card-text mt-4">Categoria </p>
+                  <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
+                  <button class="btn bg-custom text-white w-100 mt-4 btnAdd">Aggiungi</button>
+                </div>
+              </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card shadow position-relative">
+                <img src="media/rastrello.jpg" class="card-img-top" alt="media/rastrello.jpg">
+                <div class="card-body mt-3">
+                  <h5 class="card-title">Rastrello <span class="card-text float-right"><sup>€</sup>30</span></h5>
+                  <p class="card-text mt-4">Categoria </p>
+                  <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
+                  <button class="btn bg-custom text-white w-100 mt-4 btnAdd">Aggiungi</button>
+                </div>
+              </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card shadow position-relative">
+                <img src="media/rastrello.jpg" class="card-img-top" alt="media/rastrello.jpg">
+                <div class="card-body mt-3">
+                  <h5 class="card-title">Rastrello <span class="card-text float-right"><sup>€</sup>30</span></h5>
+                  <p class="card-text mt-4">Categoria </p>
+                  <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
+                  <button class="btn bg-custom text-white w-100 mt-4 btnAdd">Aggiungi</button>
+                </div>
+              </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card shadow position-relative">
+                <img src="media/rastrello.jpg" class="card-img-top" alt="media/rastrello.jpg">
+                <div class="card-body mt-3">
+                  <h5 class="card-title">Rastrello <span class="card-text float-right"><sup>€</sup>30</span></h5>
+                  <p class="card-text mt-4">Categoria </p>
+                  <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
+                  <button class="btn bg-custom text-white w-100 mt-4 btnAdd">Aggiungi</button>
+                </div>
+              </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card shadow position-relative">
+                <img src="media/rastrello.jpg" class="card-img-top" alt="media/rastrello.jpg">
+                <div class="card-body mt-3">
+                  <h5 class="card-title">Rastrello <span class="card-text float-right"><sup>€</sup>30</span></h5>
+                  <p class="card-text mt-4">Categoria </p>
+                  <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
+                  <button class="btn bg-custom text-white w-100 mt-4 btnAdd">Aggiungi</button>
+                </div>
+              </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselMobile" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselMobile" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+         </div>
+       </div>
+     </div>
+     
+    <!-- FEEDBACKS -->
+
+
+    <div class="container py-5 my-5">
+      <div class="row justify-content-center">
+        <div class="col-12 text-center">
+          <h2 class="text-trenta text-center">Feedbacks</h2>
+          <hr class="hrFeed ">
+          <div >
+            <i class="fas fa-star fa-2x star"></i>
+            <i class="fas fa-star fa-2x star"></i>
+            <i class="fas fa-star fa-2x star"></i>
+            <i class="fas fa-star fa-2x star"></i>
+            <i class="fas fa-star fa-2x"></i>
+          </div>
+        </div>
+      </div>
+      <div class="row my-5">
+        <div class="col-12 col-md-6">
+          <div class="row mt-5">
+            <div class="col-12 col-md-6">
+              <img src="http://dummyimage.com/60x60/666/ffffff&text=No+Image" class="img-rounded">
+							<div class="review-block-name"><a href="#">Natura4ever</a></div>
+              <div class="review-block-date">January 29, 2016<br/></div>
+            </div>
+            <div class="col-12 col-md-6 mt-4 mt-md-0">
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star "></i>
+              <p class="text-trenta my-3">Do 4 stelle solo perchè tarda sempre le spedizioni, ma per il resto dà ottimi prodotti</p>
+            </div>
+            <div class="col-12 col-md-6 mt-4">
+              <img src="http://dummyimage.com/60x60/666/ffffff&text=No+Image" class="img-rounded">
+							<div class="review-block-name"><a href="#">Nick Tailor</a></div>
+              <div class="review-block-date">March 1, 2018<br/></div>
+            </div>
+            <div class="col-12 col-md-6 mt-4">
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <p class="text-trenta my-3">TUtti i suoi prodotti sono in perfetto stato. Sa il fatto suo!</p>
+            </div>
+            <div class="col-12 col-md-6 mt-4">
+              <img src="http://dummyimage.com/60x60/666/ffffff&text=No+Image" class="img-rounded">
+							<div class="review-block-name"><a href="#">Padre Natura</a></div>
+              <div class="review-block-date">May 15, 2019<br/></div>
+            </div>
+            <div class="col-12 col-md-6 mt-4">
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <p class="text-trenta my-3">Dal momento in cui ho iniziato a comprare da lei non ho più smesso</p>
+            </div>
+            <div class="col-12 col-md-6 mt-4">
+              <img src="http://dummyimage.com/60x60/666/ffffff&text=No+Image" class="img-rounded">
+							<div class="review-block-name"><a href="#">Greta Thunberg</a></div>
+              <div class="review-block-date">January 2, 2020<br/></div>
+            </div>
+            <div class="col-12 col-md-6 mt-4">
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star  star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star "></i>
+              <i class="fas fa-star "></i>
+              <p class="text-trenta my-3">Le do tre stelle solo perchè non è venuta alle mie marce!</p>
+            </div>
+            <div class="col-12 col-md-6 mt-4">
+              <img src="http://dummyimage.com/60x60/666/ffffff&text=No+Image" class="img-rounded">
+							<div class="review-block-name"><a href="#">TreeHugger</a></div>
+              <div class="review-block-date">June 28, 2020<br/></div>
+            </div>
+            <div class="col-12 col-md-6 mt-4">
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star  star"></i>
+              <i class="fas fa-star  star"></i>
+              <i class="fas fa-star  star"></i>
+              <i class="fas fa-star "></i>
+              <p class="text-trenta my-3">4 stelle meritartissime</p>
+            </div>
+            <div id="spazio"> 
+
+            </div>
+          </div> 
+        </div>
+        <div class="col-12 my-5">
+          <div class="form">
+            <div class="form-group">
+              <label class="text-trenta h5" for="exampleFormControlTextarea1">Lascia un commento:</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              <button id="comment" class="btn bg-custom text-white float-right my-4 w-25">Invia</button>
+            </div>
+            <div class="float-left">
+              <i class="fas fa-star starFeed"></i>
+              <i class="fas fa-star starFeed"></i>
+              <i class="fas fa-star starFeed"></i>
+              <i class="fas fa-star starFeed"></i>
+              <i class="fas fa-star starFeed"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+   
+    <!-- FOOTER -->
+
+    <footer class="bg-dark bg-trenta pt-5 mt-5">
+      <div class="container pb-5 mt-5">
+        <div class="row mx-auto">
+          <div class="col-12 col-md-6">
+            
+              <h2 class="text-white text-center">pRESTO</h2>
+              <div class="d-flex justify-content-center text-left align-items-center">
+              <a href="https://it-it.facebook.com/" target="blank"><i class="fab fa-facebook-square  p-2 text-white"></i></a>
+              <a href="https://www.instagram.com/?hl=it" target="blank"><i class="fab fa-instagram-square  p-2 text-white"></i></a>
+              <a href="https://twitter.com/explore" target="blank"><i class="fab fa-twitter-square  p-2 text-white"></i></a>
+             </div>
+              <hr class="my-3 hrfooter">
+              <div class="pt-3">
+                <p class="text-center text-white">P.IVA - 0192347658</p>
+              </div>
+          </div>
+          <div class="col-12 col-md-6">
+             <div class="row mx-auto">
+               <div class="col-12 col-md-4 p-2">
+                  <h3 class="text-white text-center pb-3">Supporto</h3>
+                  <ul>
+                    <li class="text-white">Contatti</li>
+                    <li class="text-white">FAQs</li>
+                    <li class="text-white">Spedizioni</li>
+                    <li class="text-white">Aiuto</li>
+                  </ul>
+               </div>
+               <div class="col-12 col-md-4 p-2">
+                <h3 class="text-white text-center pb-3">Azienda</h3>
+                <ul>
+                  <li class="text-white">Storia</li>
+                  <li class="text-white">Carriere</li>
+                  <li class="text-white">Termini e condizioni</li>
+                  <li class="text-white">Privacy & Cookie Policy</li>
+                </ul>
+             </div>
+               <div class="col-12 col-md-4 p-2">
+                <h3 class="text-white text-center pb-3">Contatti</h3>
+                
+                  <p class="text-white mb-0">+39 0123-4567890</p>
+                  <p class="text-white mb-0">344 1234567</p>
+                  <p class="text-white mb-0">help@presto.it</p>
+                 
+                
+               </div>
+             </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- MODAL -->
+
+     <!-- Modal info su di me -->
+     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content text-center">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                    <h4 class="modal-title text-trenta" id="myModalLabel">Info su Gea</h4>
+                    </div>
+                <div class="modal-body">
+                    
+                    <img src="media/prof.jpg" name="aboutme" width="150" height="180" class="img-fluid profilePic mb-5"></a>
+                    <h3 class="text-trenta mb-5"> Gea McEarth <small>USA</small></h3>
+                    <span><strong>Abilità: </strong></span>
+                        <span class="label bg-custom text-white">Pollice verde</span>
+                        <span class="label bg-trenta text-white">Photoshop</span>
+                        <span class="label bg-custom text-white">GIS</span>
+                        <span class="label bg-trenta text-white">Computer Geek</span>
+                    
+                    
+                    
+                    <p class="text-left text-trenta mt-5"><strong class="text-trenta">Bio: </strong><br>
+                         Single nata in Texas, ho 30 anni e attualmente in giro per il mondo alla scoperta dei panorami più belli che la natura possa offrirmi.</p>
+                    <br>
+                    
+                </div>
+                <div class="modal-footer">
+                    
+                    <button type="button" class="btn bg-custom text-white" data-dismiss="modal">Ne ho abbastanza</button>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal per il login -->
+
+    <div class="modal fade" id="modUser" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-custom" id="exampleModalLabel">Login</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">UserID</label>
+                <input type="text" class="form-control border-bottom-custom" id="exampleInputEmail1" aria-describedby="emailHelp">
+                
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control border-bottom-custom" id="exampleInputPassword1">
+              </div>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Ricordami</label>
+              </div>
+              <button type="submit" class="btn bg-custom text-white">Vai!</button>
+            </form>
+          </div>
+          <hr class="hrfooter">
+          <div class="py-3">
+            <h5 class="text-trenta text-center">Non ancora un'utente? <a class="text-custom" href="">Registrati</a></h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Modal per la ricerca -->
+<div class="modal fade" id="modSearch" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-custom" id="exampleModalLabel">Cerca nel nostro sito</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <input type="text" class="form-control border-bottom-custom" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Inserisci testo">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn bg-custom text-white">Cerca</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/5f18af2e46.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+      $('.best-products').slick({
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
+  });
+
+    </script>
+    <script>
+        $('.caricati').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: '.slider-nav'
+});
+$('.slider-nav').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  asNavFor: '.slider-for',
+  dots: true,
+  centerMode: true,
+  focusOnSelect: true
+});
+    </script>
+
+<script>
+let stelle = document.querySelectorAll('.starFeed')
+
+let commenti = document.querySelector('#comment')
+
+stelle.forEach( e => e.addEventListener('click', ()=>{
+    e.classList.toggle('text-custom')
+}))
+
+let spazio = document.querySelector('#spazio')
+
+commenti.addEventListener('click',()=>{
+  spazio.innerHTML = `<div class="col-12 col-md-6 mt-4">
+                       <img src="http://dummyimage.com/60x60/666/ffffff&text=No+Image" class="img-rounded">
+                       <div class="review-block-name"><a href="#">TrialUser</a>
+                        </div>
+                       <div class="review-block-date">Giugno 27, 2020<br/>1 day
+                      </div>
+                      </div>
+            <span>
+            <div class=" col-md-6 d-flex flex-inline float-right">
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <i class="fas fa-star star"></i>
+              <p class="text-trenta my-3">123456789</p>
+            </div></span>`;
+})
+
+
+
+
+</script>
+</body>
+</html>

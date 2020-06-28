@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css ">
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Molengo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>PRODOTTI</title>
+  </head>
+  <body>
+
+    <!-- NAVBAR -->
+     
+    <nav id="navbar" class="navbar navbar-expand  fixed-top d-none d-md-flex .border-custom-bottom">
+      <a class="navbar-brand" href="#"></a>
+     
+    
+      <div class="collapse navbar-collapse" id="navbarsExample02">
+        <img class="img-fluid mr-3" src="media/logo.png" width="100" height="200" >
+        
+        <div class="ml-auto d-none d-md-flex">
+          <button class="btn text-trenta">
+          <i class="fas fa-search mx-1" data-toggle="modal" data-target="#modSearch"></i>
+          </button>
+          <button class="btn text-trenta">
+          <i class="far fa-user mx-1" data-toggle="modal" data-target="#modUser"></i>
+          </button>
+          <button class="btn text-trenta">
+          <i class="far fa-heart mx-1" id="heart"></i>
+          </button>
+          <button class="btn text-trenta">
+          <i id="cart" class="fas fa-shopping-cart mx-1"></i>
+          </button>
+          <button id="menuToggler" class="btn text-trenta">
+            <i class="fas fa-bars mx-1"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+    
+    <div id="menu">
+      <div class="container h-100 py-5 my-5">
+        <div class="row h-100 align-items-center">
+          <div class="col-12 text-center">
+            <h3>VEDI GLI ANNUNCI</h3>
+          </div>
+          <div class="col-12 text-center">
+            <h3>INSERISCI UN ANNUNCIO</h3>
+          </div>
+          <div class="col-12 text-center">
+            <h3>DOVE SIAMO</h3>
+          </div>
+          <div class="col-12 text-center">
+            <h3>LAVORA CON NOI</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HEADER -->
+  
+    <header class="headerProdotti mb-5">
+        <div class="container h-100">
+          <div class="row h-100 align-items-center">
+            <div class="col-12 text-center">
+              <h1 class="mt-5 pt-5 text-custom">I Nostri Prodotti</h1>
+             </div>
+          </div>
+        </div>
+      </header>
+
+     <!-- LISTA PRODOTTI -->
+    
+     <div class="container my-5 py-5">
+         <div class="row">
+             <!-- FILTRI -->
+             <div class="col-12 col-md-3 mb-5">
+              
+              
+                
+                    
+                        <div class="panel-group accord" id="accordion" role="tablist" aria-multiselectable="true">
+                            <p class="h3 text-trenta">Affina la ricerca</p>
+                            <hr class="hrfilter mr-5">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Prezzo
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                    <div class="panel-body">
+                                        <input type="range" class="custom-range" min="0" max="5000" value="5000" id="rangePrice">
+                                        <p class="text-left text-trenta">0€<span id="rangeShow" class="float-right text-trenta">€5000</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingTwo">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            Categoria
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                    <div class="panel-body">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label my-2" for="customCheck1">Categoria 1</label>
+                                          </div>
+                                          <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                            <label class="custom-control-label my-2" for="customCheck2">Categoria 2</label>
+                                          </div>
+                                          <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                            <label class="custom-control-label my-2" for="customCheck3">Categoria 3</label>
+                                          </div>
+                                          <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                            <label class="custom-control-label my-2" for="customCheck4">Categoria 4</label>
+                                          </div>
+                                          <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck5">
+                                            <label class="custom-control-label my-2" for="customCheck5">Categoria 5</label>
+                                          </div>
+                                          <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck6">
+                                            <label class="custom-control-label my-2" for="customCheck6">Categoria 6</label>
+                                          </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingThree">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            Nome
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                    <div class="panel-body">
+                                        <form>
+                                            <div class="form-group">
+                                              <input type="email" class="form-control border-bottom-custom" id="exampleInputEmail33" aria-describedby="emailHelp" placeholder="Inizia a digitare">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                
+            
+             </div>
+             <!-- PRODOTTI -->
+             <div class="col-12 col-md-9">
+                 <div class="row ml-3">
+                     
+                        <div class="card-deck">
+                            <div class="card shadow position-relative">
+                                <div class="position-absolute mt-3 ml-3">
+                                    <i class="fas fa-heart favorite fa-2x favAdd"></i>
+                                </div>
+                              <img src="media/rastrello.jpg" class="card-img-top" alt="media/rastrello.jpg">
+                              <div class="card-body mt-3">
+                                <h5 class="card-title">Rastrello <span class="card-text float-right"><sup>€</sup>30</span></h5>
+                                <p class="card-text mt-4">Categoria </p>
+                                <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
+                                <button class="btn bg-custom text-white w-100 mt-4 btnAdd">Aggiungi</button>
+                              </div>
+                            </div>
+                            <div class="card shadow position-relative">
+                                <div class="position-absolute mt-3 ml-3">
+                                    <i class="fas fa-heart favorite fa-2x favAdd"></i>
+                                </div>
+                              <img src="media/rastrello.jpg" class="card-img-top" alt="media/rastrello.jpg">
+                              <div class="card-body mt-3">
+                                <h5 class="card-title">Rastrello <span class="card-text float-right"><sup>€</sup>30</span></h5>
+                                <p class="card-text mt-4">Categoria </p>
+                                <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
+                                <button class="btn bg-custom text-white w-100 mt-4 btnAdd">Aggiungi</button>
+                              </div>
+                            </div>
+                            <div class="card shadow position-relative">
+                                <div class="position-absolute mt-3 ml-3">
+                                    <i class="fas fa-heart favorite fa-2x favAdd"></i>
+                                </div>
+                              <img src="media/rastrello.jpg" class="card-img-top" alt="media/rastrello.jpg">
+                              <div class="card-body mt-3">
+                                <h5 class="card-title">Rastrello <span class="card-text float-right"><sup>€</sup>30</span></h5>
+                                <p class="card-text mt-4">Categoria </p>
+                                <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
+                                <button class="btn bg-custom text-white w-100 mt-4 btnAdd">Aggiungi</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card-deck mt-3 mt-md-5">
+                            <div class="card shadow position-relative">
+                                <div class="position-absolute mt-3 ml-3">
+                                    <i class="fas fa-heart favorite fa-2x favAdd"></i>
+                                </div>
+                              <img src="media/rastrello.jpg" class="card-img-top" alt="media/rastrello.jpg">
+                              <div class="card-body mt-3">
+                                <h5 class="card-title">Rastrello <span class="card-text float-right"><sup>€</sup>30</span></h5>
+                                <p class="card-text mt-4">Categoria </p>
+                                <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
+                                <button class="btn bg-custom text-white w-100 mt-4 btnAdd">Aggiungi</button>
+                              </div>
+                            </div>
+                            <div class="card shadow position-relative">
+                                <div class="position-absolute mt-3 ml-3">
+                                    <i class="fas fa-heart favorite fa-2x favAdd"></i>
+                                </div>
+                              <img src="media/rastrello.jpg" class="card-img-top" alt="media/rastrello.jpg">
+                              <div class="card-body mt-3">
+                                <h5 class="card-title">Rastrello <span class="card-text float-right"><sup>€</sup>30</span></h5>
+                                <p class="card-text mt-4">Categoria </p>
+                                <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
+                                <button class="btn bg-custom text-white w-100 mt-4 btnAdd">Aggiungi</button>
+                              </div>
+                            </div>
+                            <div class="card shadow position-relative">
+                                <div class="position-absolute mt-3 ml-3">
+                                    <i class="fas fa-heart favorite fa-2x favAdd"></i>
+                                </div>
+                              <img src="media/rastrello.jpg" class="card-img-top" alt="media/rastrello.jpg">
+                              <div class="card-body mt-3">
+                                <h5 class="card-title">Rastrello <span class="card-text float-right"><sup>€</sup>30</span></h5>
+                                <p class="card-text mt-4">Categoria </p>
+                                <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
+                                <button class="btn bg-custom text-white w-100 mt-4 btnAdd">Aggiungi</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card-deck mt-3 mt-md-5">
+                            <div class="card shadow position-relative">
+                                <div class="position-absolute mt-3 ml-3">
+                                    <i class="fas fa-heart favorite fa-2x favAdd"></i>
+                                </div>
+                              <img src="media/rastrello.jpg" class="card-img-top" alt="media/rastrello.jpg">
+                              <div class="card-body mt-3">
+                                <h5 class="card-title">Rastrello <span class="card-text float-right"><sup>€</sup>30</span></h5>
+                                <p class="card-text mt-4">Categoria </p>
+                                <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
+                                <button class="btn bg-custom text-white w-100 mt-4 btnAdd">Aggiungi</button>
+                              </div>
+                            </div>
+                            <div class="card shadow position-relative">
+                                <div class="position-absolute mt-3 ml-3">
+                                    <i class="fas fa-heart favorite fa-2x favAdd"></i>
+                                </div>
+                              <img src="media/rastrello.jpg" class="card-img-top" alt="media/rastrello.jpg">
+                              <div class="card-body mt-3">
+                                <h5 class="card-title">Rastrello <span class="card-text float-right"><sup>€</sup>30</span></h5>
+                                <p class="card-text mt-4">Categoria </p>
+                                <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
+                                <button class="btn bg-custom text-white w-100 mt-4 btnAdd">Aggiungi</button>
+                              </div>
+                            </div>
+                            <div class="card shadow position-relative">
+                                <div class="position-absolute mt-3 ml-3">
+                                    <i class="fas fa-heart favorite fa-2x favAdd"></i>
+                                </div>
+                              <img src="media/rastrello.jpg" class="card-img-top" alt="media/rastrello.jpg">
+                              <div class="card-body mt-3">
+                                <h5 class="card-title">Rastrello <span class="card-text float-right"><sup>€</sup>30</span></h5>
+                                <p class="card-text mt-4">Categoria </p>
+                                <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
+                                <button class="btn bg-custom text-white w-100 mt-4 btnAdd">Aggiungi</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card-deck mt-3 mt-md-5">
+                            <div class="card shadow position-relative">
+                                <div class="position-absolute mt-3 ml-3">
+                                    <i class="fas fa-heart favorite fa-2x favAdd"></i>
+                                </div>
+                              <img src="media/rastrello.jpg" class="card-img-top" alt="media/rastrello.jpg">
+                              <div class="card-body mt-3">
+                                <h5 class="card-title">Rastrello <span class="card-text float-right"><sup>€</sup>30</span></h5>
+                                <p class="card-text mt-4">Categoria </p>
+                                <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
+                                <button class="btn bg-custom text-white w-100 mt-4 btnAdd">Aggiungi</button>
+                              </div>
+                            </div>
+                            <div class="card shadow position-relative">
+                                <div class="position-absolute mt-3 ml-3">
+                                    <i class="fas fa-heart favorite fa-2x favAdd"></i>
+                                </div>
+                              <img src="media/rastrello.jpg" class="card-img-top" alt="media/rastrello.jpg">
+                              <div class="card-body mt-3">
+                                <h5 class="card-title">Rastrello <span class="card-text float-right"><sup>€</sup>30</span></h5>
+                                <p class="card-text mt-4">Categoria </p>
+                                <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
+                                <button class="btn bg-custom text-white w-100 mt-4 btnAdd">Aggiungi</button>
+                              </div>
+                            </div>
+                            <div class="card shadow position-relative">
+                                <div class="position-absolute mt-3 ml-3">
+                                    <i class="fas fa-heart favorite fa-2x favAdd"></i>
+                                </div>
+                              <img src="media/rastrello.jpg" class="card-img-top" alt="media/rastrello.jpg">
+                              <div class="card-body mt-3">
+                                <h5 class="card-title">Rastrello <span class="card-text float-right"><sup>€</sup>30</span></h5>
+                                <p class="card-text mt-4">Categoria </p>
+                                <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
+                                <button class="btn bg-custom text-white w-100 mt-4 btnAdd">Aggiungi</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card-deck mt-3 mt-md-5">
+                            <div class="card shadow position-relative">
+                                <div class="position-absolute mt-3 ml-3">
+                                    <i class="fas fa-heart favorite fa-2x favAdd"></i>
+                                </div>
+                              <img src="media/rastrello.jpg" class="card-img-top" alt="media/rastrello.jpg">
+                              <div class="card-body mt-3">
+                                <h5 class="card-title">Rastrello <span class="card-text float-right"><sup>€</sup>30</span></h5>
+                                <p class="card-text mt-4">Categoria </p>
+                                <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
+                                <button class="btn bg-custom text-white w-100 mt-4 btnAdd">Aggiungi</button>
+                              </div>
+                            </div>
+                            <div class="card shadow position-relative">
+                                <div class="position-absolute mt-3 ml-3">
+                                    <i class="fas fa-heart favorite fa-2x favAdd"></i>
+                                </div>
+                              <img src="media/rastrello.jpg" class="card-img-top" alt="media/rastrello.jpg">
+                              <div class="card-body mt-3">
+                                <h5 class="card-title">Rastrello <span class="card-text float-right"><sup>€</sup>30</span></h5>
+                                <p class="card-text mt-4">Categoria </p>
+                                <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
+                                <button class="btn bg-custom text-white w-100 mt-4 btnAdd">Aggiungi</button>
+                              </div>
+                            </div>
+                            <div class="card shadow position-relative">
+                                <div class="position-absolute mt-3 ml-3">
+                                    <i class="fas fa-heart favorite fa-2x favAdd"></i>
+                                </div>
+                              <img src="media/rastrello.jpg" class="card-img-top" alt="media/rastrello.jpg">
+                              <div class="card-body mt-3">
+                                <h5 class="card-title">Rastrello <span class="card-text float-right"><sup>€</sup>30</span></h5>
+                                <p class="card-text mt-4">Categoria </p>
+                                <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
+                                <button class="btn bg-custom text-white w-100 mt-4 btnAdd">Aggiungi</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card-deck mt-3 mt-md-5">
+                            <div class="card shadow position-relative">
+                                <div class="position-absolute mt-3 ml-3">
+                                    <i class="fas fa-heart favorite fa-2x favAdd"></i>
+                                </div>
+                              <img src="media/rastrello.jpg" class="card-img-top" alt="media/rastrello.jpg">
+                              <div class="card-body mt-3">
+                                <h5 class="card-title">Rastrello <span class="card-text float-right"><sup>€</sup>30</span></h5>
+                                <p class="card-text mt-4">Categoria </p>
+                                <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
+                                <button class="btn bg-custom text-white w-100 mt-4 btnAdd">Aggiungi</button>
+                              </div>
+                            </div>
+                            <div class="card shadow position-relative">
+                                <div class="position-absolute mt-3 ml-3">
+                                    <i class="fas fa-heart favorite fa-2x favAdd"></i>
+                                </div>
+                              <img src="media/rastrello.jpg" class="card-img-top" alt="media/rastrello.jpg">
+                              <div class="card-body mt-3">
+                                <h5 class="card-title">Rastrello <span class="card-text float-right"><sup>€</sup>30</span></h5>
+                                <p class="card-text mt-4">Categoria </p>
+                                <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
+                                <button class="btn bg-custom text-white w-100 mt-4 btnAdd">Aggiungi</button>
+                              </div>
+                            </div>
+                            <div class="card shadow position-relative">
+                                <div class="position-absolute mt-3 ml-3">
+                                    <i class="fas fa-heart favorite fa-2x favAdd"></i>
+                                </div>
+                              <img src="media/rastrello.jpg" class="card-img-top" alt="media/rastrello.jpg">
+                              <div class="card-body mt-3">
+                                <h5 class="card-title">Rastrello <span class="card-text float-right"><sup>€</sup>30</span></h5>
+                                <p class="card-text mt-4">Categoria </p>
+                                <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
+                                <button class="btn bg-custom text-white w-100 mt-4 btnAdd">Aggiungi</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card-deck mt-3 mt-md-5">
+                            <div class="card shadow position-relative">
+                                <div class="position-absolute mt-3 ml-3">
+                                    <i class="fas fa-heart favorite fa-2x favAdd"></i>
+                                </div>
+                              <img src="media/rastrello.jpg" class="card-img-top" alt="media/rastrello.jpg">
+                              <div class="card-body mt-3">
+                                <h5 class="card-title">Rastrello <span class="card-text float-right"><sup>€</sup>30</span></h5>
+                                <p class="card-text mt-4">Categoria </p>
+                                <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
+                                <button class="btn bg-custom text-white w-100 mt-4 btnAdd">Aggiungi</button>
+                              </div>
+                            </div>
+                            <div class="card shadow position-relative">
+                                <div class="position-absolute mt-3 ml-3">
+                                    <i class="fas fa-heart favorite fa-2x favAdd"></i>
+                                </div>
+                              <img src="media/rastrello.jpg" class="card-img-top" alt="media/rastrello.jpg">
+                              <div class="card-body mt-3">
+                                <h5 class="card-title">Rastrello <span class="card-text float-right"><sup>€</sup>30</span></h5>
+                                <p class="card-text mt-4">Categoria </p>
+                                <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
+                                <button class="btn bg-custom text-white w-100 mt-4 btnAdd">Aggiungi</button>
+                              </div>
+                            </div>
+                            <div class="card shadow position-relative">
+                                <div class="position-absolute mt-3 ml-3">
+                                    <i class="fas fa-heart favorite fa-2x favAdd"></i>
+                                </div>
+                              <img src="media/rastrello.jpg" class="card-img-top" alt="media/rastrello.jpg">
+                              <div class="card-body mt-3">
+                                <h5 class="card-title">Rastrello <span class="card-text float-right"><sup>€</sup>30</span></h5>
+                                <p class="card-text mt-4">Categoria </p>
+                                <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
+                                <button class="btn bg-custom text-white w-100 mt-4 btnAdd">Aggiungi</button>
+                              </div>
+                            </div>
+                          </div>
+                       </div>
+                 
+             </div>
+         </div>
+     </div>
+    
+   
+    <!-- FOOTER -->
+
+    <footer class="bg-dark bg-trenta pt-5 mt-5">
+      <div class="container pb-5 mt-5">
+        <div class="row mx-auto">
+          <div class="col-12 col-md-6">
+            
+              <h2 class="text-white text-center">pRESTO</h2>
+              <div class="d-flex justify-content-center text-left align-items-center">
+              <a href="https://it-it.facebook.com/" target="blank"><i class="fab fa-facebook-square  p-2 text-white"></i></a>
+              <a href="https://www.instagram.com/?hl=it" target="blank"><i class="fab fa-instagram-square  p-2 text-white"></i></a>
+              <a href="https://twitter.com/explore" target="blank"><i class="fab fa-twitter-square  p-2 text-white"></i></a>
+             </div>
+              <hr class="my-3 hrfooter">
+              <div class="pt-3">
+                <p class="text-center text-white">P.IVA - 0192347658</p>
+              </div>
+          </div>
+          <div class="col-12 col-md-6">
+             <div class="row mx-auto">
+               <div class="col-12 col-md-4 p-2">
+                  <h3 class="text-white text-center pb-3">Supporto</h3>
+                  <ul>
+                    <li class="text-white">Contatti</li>
+                    <li class="text-white">FAQs</li>
+                    <li class="text-white">Spedizioni</li>
+                    <li class="text-white">Aiuto</li>
+                  </ul>
+               </div>
+               <div class="col-12 col-md-4 p-2">
+                <h3 class="text-white text-center pb-3">Azienda</h3>
+                <ul>
+                  <li class="text-white">Storia</li>
+                  <li class="text-white">Carriere</li>
+                  <li class="text-white">Termini e condizioni</li>
+                  <li class="text-white">Privacy & Cookie Policy</li>
+                </ul>
+             </div>
+               <div class="col-12 col-md-4 p-2">
+                <h3 class="text-white text-center pb-3">Contatti</h3>
+                
+                  <p class="text-white mb-0">+39 0123-4567890</p>
+                  <p class="text-white mb-0">344 1234567</p>
+                  <p class="text-white mb-0">help@presto.it</p>
+                 
+                
+               </div>
+             </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- MODAL -->
+
+    <!-- Modal per il login -->
+
+    <div class="modal fade" id="modUser" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-custom" id="exampleModalLabel">Login</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">UserID</label>
+                <input type="text" class="form-control border-bottom-custom" id="exampleInputEmail1" aria-describedby="emailHelp">
+                
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control border-bottom-custom" id="exampleInputPassword1">
+              </div>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Ricordami</label>
+              </div>
+              <button type="submit" class="btn bg-custom text-white">Vai!</button>
+            </form>
+          </div>
+          <hr class="hrfooter">
+          <div class="py-3">
+            <h5 class="text-trenta text-center">Non ancora un'utente? <a class="text-custom" href="">Registrati</a></h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Modal per la ricerca -->
+<div class="modal fade" id="modSearch" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-custom" id="exampleModalLabel">Cerca nel nostro sito</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <input type="text" class="form-control border-bottom-custom" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Inserisci testo">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn bg-custom text-white">Cerca</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/5f18af2e46.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+      $('.best-products').slick({
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
+  });
+
+    </script>
+</body>
+</html>
