@@ -364,8 +364,16 @@
               <i class="fas fa-star "></i>
               <p class="text-trenta my-3">4 stelle meritartissime</p>
             </div>
-            <div id="spazio"> 
-
+            <div class="col-12 col-md-6 mt-4">
+              <img id="image" src="" alt="">
+							<div  id="user" class="review-block-name"></div>
+              <div id="date" class="review-block-date"><br/></div>
+            </div>
+            <div class="col-12 col-md-6 mt-4">
+              <div id="stars">
+              
+            </div>
+              <p id="commento" class="text-trenta my-3"></p>
             </div>
           </div> 
         </div>
@@ -612,34 +620,47 @@ $('.slider-nav').slick({
     </script>
 
 <script>
-let stelle = document.querySelectorAll('.starFeed')
+
 
 let commenti = document.querySelector('#comment')
 
-stelle.forEach( e => e.addEventListener('click', ()=>{
-    e.classList.toggle('text-custom')
-}))
 
-let spazio = document.querySelector('#spazio')
 
-commenti.addEventListener('click',()=>{
-  spazio.innerHTML = `<div class="col-12 col-md-6 mt-4">
-                       <img src="http://dummyimage.com/60x60/666/ffffff&text=No+Image" class="img-rounded">
-                       <div class="review-block-name"><a href="#">TrialUser</a>
-                        </div>
-                       <div class="review-block-date">Giugno 27, 2020<br/>1 day
-                      </div>
-                      </div>
-            <span>
-            <div class=" col-md-6 d-flex flex-inline float-right">
-              <i class="fas fa-star star"></i>
-              <i class="fas fa-star star"></i>
-              <i class="fas fa-star star"></i>
-              <i class="fas fa-star star"></i>
-              <i class="fas fa-star star"></i>
-              <p class="text-trenta my-3">123456789</p>
-            </div></span>`;
+let image = document.querySelector('#image')
+let user = document.querySelector('#user')
+let date = document.querySelector('#date')
+let stars = document.querySelector('#stars')
+let commento = document.querySelector('#commento')
+let textbox = document.querySelector('#exampleFormControlTextarea1')
+
+
+
+commenti.addEventListener('click', ()=>{
+  image.innerHTML = '<img src="http://dummyimage.com/60x60/666/ffffff&text=No+Image" class="img-rounded">'
+  user.innerHTML = '<div class="review-block-name"><a href="#">TrialUser</a></div>'
+  date.innerHTML = '<div class="review-block-date">September 12, 2020<br/></div>'
+  stars.innerHTML = ['<i class="fas fa-star star"></i>' + ' <i class="fas fa-star  star"></i>' + '<i class="fas fa-star  star"></i>' + '<i class="fas fa-star  star"></i>' + '<i class="fas fa-star "></i>']
+             
+  
+  
+   textbox.addEventListener('keyup', ()=>{
+    console.log(textbox.value)
+  })
+
+
+  commento.innerHTML = textbox.value          
+              
+              
 })
+
+
+
+
+							
+              
+
+              
+             
 
 
 

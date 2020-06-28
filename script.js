@@ -57,3 +57,32 @@ $(function () {
     $('[data-toggle="tooltip"]').tooltip();
 });
 
+function isValid(stringa){
+    return stringa.split("").length>=5 && stringa.split("").some(e=>Number(e))
+}
+
+let pwd = document.querySelector("#inputPassword")
+let pwdCheck =document.querySelector("#checkPass") 
+
+pwdCheck.addEventListener('click',()=>{
+    console.log(pwd.value)
+    isValid(pwd.value)
+})
+
+pwdCheck.addEventListener('click',()=>{
+    event.preventDefault()
+})
+
+let pwdStatus = document.querySelector("#pwdStatus")
+
+pwd.addEventListener('keyup',()=>{
+    console.log(pwd.value)
+    if(isValid(pwd.value)) {
+        pwdStatus.classList.remove("text-danger")
+        pwdStatus.classList.add("text-success")
+        pwdStatus.innerText="OK"
+    }else{
+        pwdStatus.classList.add("text-danger")
+        pwdStatus.innerText="Password non valida"
+    }
+})
