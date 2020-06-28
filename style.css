@@ -433,25 +433,8 @@ a:hover,a:focus{
   background: linear-gradient(90deg,transparent,var(--dieci),transparent);
 }
 
-.btn-grey{
-  background-color:#D8D8D8;
-color:#FFF;
-}
-.rating-block{
-background-color:rgb(131, 125, 131);
-border:1px solid #EFEFEF;
-padding:15px 15px 25px 15px;
-border-radius:3px;
-height:20vh;
-width:50vh;
-}
-.review-block{
-	background-color:rgb(131, 125, 131);
-	border:1px solid #EFEFEF;
-	padding:15px;
-	border-radius:3px;
-	margin-bottom:15px;
-}
+
+
 .review-block-name{
 	font-size:12px;
 	margin:10px 0;
@@ -459,24 +442,44 @@ width:50vh;
 .review-block-date{
 	font-size:12px;
 }
-.review-block-description{
-	font-size:13px;
-}
+
 
 .star{
-  color:var(--dieci);
+  color:#ffc107;
 }
 
-.block{
-  position: relative;
-  left:133px;
-}
+
 @media screen and (max-width:500px){
   .block{
     position: relative;
     left:-13px;
   }
 }
+
+
+
+input[name="c4l-rating"] { display: none; }
+input[name="c4l-rating"] + label:after { content: none; }
+input[name="c4l-rating"] + label { font-family: 'FontAwesome'; }
+input[name="c4l-rating"] + label:before {
+    background-color: transparent;
+    border: none !important;
+    color: #ffc107;
+    content: '\f005';
+    font-size: 1.33333333em;
+    transition: none;
+}
+input[name="c4l-rating"]:checked ~ label:before {
+    background-color: transparent;
+    border: none !important;
+    color: var(--trenta);
+}
+input[name="c4l-rating"]:checked + label:before { color: #ffc107; }
+input[name="c4l-rating"] + label:hover ~ input + label:before { opacity: 0.6; }
+input[name="c4l-rating"] + label:active {color:#ffc107;}
+
+
+
 /* FINE STYLE PER PROFILO UTENTE */
 
 /* STYLE PER REVISORE */
