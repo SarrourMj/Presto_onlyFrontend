@@ -38,7 +38,7 @@ p,span,a,button{
 }
 
 .btn-pref{
-  border: 2px solid var(--dieci) !important;
+  border: 1px solid var(--dieci) !important;
   background-color: white;
 }
 
@@ -70,9 +70,15 @@ p,span,a,button{
 }
 
 .carImg{
-  height: 250px;
-  width: 280px;
+  height: 280px;
+  width: 270px;
 }
+
+.carImgSP{
+  height: 250px;
+  width: 250px;
+}
+
 
 header {
     position: relative;
@@ -114,15 +120,15 @@ header {
   }
 
   hr{
-    height: 6px;
+    height: 4px;
     width: 33%;
     background: linear-gradient(90deg, transparent, var(--dieci), transparent);
   }
 
   .hrfooter{
-    height:3px;
+    height: 2px;
     width: 40%;
-    background-color: white !important;
+    background: linear-gradient(90deg, white, var(--dieci), white);
   }
 
   .imgS {
