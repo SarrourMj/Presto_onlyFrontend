@@ -5,7 +5,8 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="navbar.js"></script>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -14,20 +15,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Molengo&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <title>PRODOTTI</title>
+  <title>Categories</title>
 </head>
 
 <body>
 
   <!-- NAVBAR -->
-
+  <div id="navbar-placeholder"></div>
   <nav id="navbar" class="navbar navbar-expand  fixed-top d-none d-md-flex .border-custom-bottom">
     <a class="navbar-brand" href="#"></a>
 
 
     <div class="collapse navbar-collapse" id="navbarsExample02">
       <img class="img-fluid mr-3" src="media/logo.png" width="100" height="200">
-
+      <div id="navbar-placeholder"></div>
       <div class="ml-auto d-none d-md-flex">
         <button class="btn text-trenta">
           <i class="fas fa-search mx-1" data-toggle="modal" data-target="#modSearch"></i>
@@ -52,16 +53,16 @@
     <div class="container h-100 py-5 my-5">
       <div class="row h-100 align-items-center">
         <div class="col-12 text-center">
-          <h3>VEDI GLI ANNUNCI</h3>
+          <h3>Categories</h3>
         </div>
         <div class="col-12 text-center">
-          <h3>INSERISCI UN ANNUNCIO</h3>
+          <h3>Post an item</h3>
         </div>
         <div class="col-12 text-center">
-          <h3>DOVE SIAMO</h3>
+          <h3>About us</h3>
         </div>
         <div class="col-12 text-center">
-          <h3>LAVORA CON NOI</h3>
+          <h3>Contact us</h3>
         </div>
       </div>
     </div>
@@ -73,7 +74,7 @@
     <div class="container h-100">
       <div class="row h-100 align-items-center">
         <div class="col-12 text-center">
-          <h1 class="mt-5 pt-5 text-custom">I Nostri Prodotti</h1>
+          <h1 class="mt-5 pt-5 text-custom">Our Categories</h1>
         </div>
       </div>
     </div>
@@ -90,21 +91,21 @@
 
 
         <div class="panel-group accord" id="accordion" role="tablist" aria-multiselectable="true">
-          <p class="h3 text-trenta">Affina la ricerca</p>
+          <p class="h3 text-trenta">Refine the search</p>
           <hr class="hrfilter mr-5">
           <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="headingOne">
               <h4 class="panel-title">
                 <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
                   aria-expanded="true" aria-controls="collapseOne">
-                  <h5 class="text-trenta mb-0">Prezzo</h5>
+                  <h5 class="text-trenta mb-0">Price</h5>
                 </a>
               </h4>
             </div>
             <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
               <div class="panel-body">
                 <input type="range" class="custom-range" min="0" max="5000" value="5000" id="rangePrice">
-                <p class="text-left text-trenta">0€<span id="rangeShow" class="float-right text-trenta">€5000</span></p>
+                <p class="text-left text-trenta">0DT<span id="rangeShow" class="float-right text-trenta">€5000</span></p>
               </div>
             </div>
           </div>
@@ -113,7 +114,7 @@
               <h4 class="panel-title">
                 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"
                   aria-expanded="false" aria-controls="collapseTwo">
-                  <h5 class="text-trenta mb-0">Categoria</h5>
+                  <h5 class="text-trenta mb-0">Categories</h5>
                 </a>
               </h4>
             </div>
@@ -121,27 +122,27 @@
               <div class="panel-body">
                 <div class="custom-control custom-checkbox">
                   <input type="checkbox" class="custom-control-input" id="customCheck1">
-                  <label class="custom-control-label my-2" for="customCheck1">Piante e Fiori</label>
+                  <label class="custom-control-label my-2" for="customCheck1">Home</label>
                 </div>
                 <div class="custom-control custom-checkbox">
                   <input type="checkbox" class="custom-control-input" id="customCheck2">
-                  <label class="custom-control-label my-2" for="customCheck2">Ambienti</label>
+                  <label class="custom-control-label my-2" for="customCheck2">School</label>
                 </div>
                 <div class="custom-control custom-checkbox">
                   <input type="checkbox" class="custom-control-input" id="customCheck3">
-                  <label class="custom-control-label my-2" for="customCheck3">Giardinaggio</label>
+                  <label class="custom-control-label my-2" for="customCheck3">Garden</label>
                 </div>
                 <div class="custom-control custom-checkbox">
                   <input type="checkbox" class="custom-control-input" id="customCheck4">
-                  <label class="custom-control-label my-2" for="customCheck4">Pesticidi</label>
+                  <label class="custom-control-label my-2" for="customCheck4">Hospital</label>
                 </div>
                 <div class="custom-control custom-checkbox">
                   <input type="checkbox" class="custom-control-input" id="customCheck5">
-                  <label class="custom-control-label my-2" for="customCheck5">Macchinari</label>
+                  <label class="custom-control-label my-2" for="customCheck5">Appartment</label>
                 </div>
                 <div class="custom-control custom-checkbox">
                   <input type="checkbox" class="custom-control-input" id="customCheck6">
-                  <label class="custom-control-label my-2" for="customCheck6">Vasi</label>
+                  <label class="custom-control-label my-2" for="customCheck6">Castel</label>
                 </div>
               </div>
             </div>
@@ -151,7 +152,7 @@
               <h4 class="panel-title">
                 <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree"
                   aria-expanded="false" aria-controls="collapseThree">
-                  <h5 class="text-trenta mb-0">Nome</h5>
+                  <h5 class="text-trenta mb-0">Name</h5>
                 </a>
               </h4>
             </div>
@@ -160,7 +161,7 @@
                 <form>
                   <div class="form-group">
                     <input type="email" class="form-control border-bottom-custom" id="exampleInputEmail33"
-                      aria-describedby="emailHelp" placeholder="Inizia a digitare">
+                      aria-describedby="emailHelp" placeholder="Search">
                   </div>
                 </form>
               </div>
@@ -171,7 +172,7 @@
 
 
       </div>
-      <!-- PRODOTTI -->
+      <!-- Product -->
       <div class="col-12 col-md-9">
         <div class="row ml-3">
 
@@ -182,54 +183,50 @@
               </div>
               <img src="media/rastrello.jpg" class="card-img-top" alt="foto_revisione/darev/sakuras">
               <div class="card-body mt-3">
-                <h5 class="card-title">Margherite <span class="card-text float-right"><sup>€</sup>40</span></h5>
-                <p class="card-text mt-4">Piante e Fiori </p>
-                <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
-                <button class="btn bg-custom text-white w-100 mt-5 btnAdd">Vai all'annuncio</button>
-                <button class="btn bg-custom text-white w-100 mt-1 btnAdd btn btn-pref text-custom">Aggiungi al carrello</button>
+                <h5 class="card-title">For you <span class="card-text float-right"><sup>€</sup>40</span></h5>
+                <p class="card-text mt-4">Plants and Flowers </p>
+                
+                <button class="btn bg-custom text-white w-100 mt-5 btnAdd">View More</button>
+                
               </div>
-            </div>
-            <div class="card shadow position-relative">
-              <div class="position-absolute mt-3 ml-3">
-                <i class="fab fa-canadian-maple-leaf fa-3x favorite favAdd"></i>
-              </div>
-              <img src="media/rastrello.jpg" class="card-img-top" alt="">
-              <div class="card-body mt-3">
-                <h5 class="card-title">Mietitrebbia (Usato) <span class="card-text float-right"><sup>€</sup>350</span>
-                </h5>
-                <p class="card-text mt-4">Macchinari </p>
-                <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
-                <button class="btn bg-custom text-white w-100 mt-5 btnAdd">Vai all'annuncio</button>
-                <button class="btn bg-custom text-white w-100 mt-1 btnAdd btn btn-pref text-custom">Aggiungi al carrello</button>
-              </div>
-            </div>
-            <div class="card shadow position-relative">
-              <div class="position-absolute mt-3 ml-3">
-                <i class="fab fa-canadian-maple-leaf fa-3x favorite favAdd"></i>
-              </div>
-              <img src="media/rastrello.jpg" class="card-img-top" alt="foto_revisione/darev/sakuras">
-              <div class="card-body mt-3">
-                <h5 class="card-title">Guanti <span class="card-text float-right"><sup>€</sup>56,90</span></h5>
-                <p class="card-text mt-4">Giardinaggio </p>
-                <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
-                <button class="btn bg-custom text-white w-100 mt-5 btnAdd">Vai all'annuncio</button>
-                <button class="btn bg-custom text-white w-100 mt-1 btnAdd btn btn-pref text-custom">Aggiungi al carrello</button>
-              </div>
+              <div class="card shadow position-relative">
+                <div class="position-absolute mt-3 ml-3">
+                  <i class="fab fa-canadian-maple-leaf fa-3x favorite favAdd"></i>
+                </div>
+                <img src="media/rastrello.jpg" class="card-img-top" alt="foto_revisione/darev/sakuras">
+                <div class="card-body mt-3">
+                  <h5 class="card-title">For you <span class="card-text float-right"><sup>€</sup>40</span></h5>
+                  <p class="card-text mt-4">Plants and Flowersi </p>
+                  
+                  <button class="btn bg-custom text-white w-100 mt-5 btnAdd">View More</button>
+                  
+                </div>
+                <div class="card shadow position-relative">
+                  <div class="position-absolute mt-3 ml-3">
+                    <i class="fab fa-canadian-maple-leaf fa-3x favorite favAdd"></i>
+                  </div>
+                  <img src="media/rastrello.jpg" class="card-img-top" alt="foto_revisione/darev/sakuras">
+                  <div class="card-body mt-3">
+                    <h5 class="card-title">For you <span class="card-text float-right"><sup>€</sup>40</span></h5>
+                    <p class="card-text mt-4">Plants and Flowers </p>
+                    
+                    <button class="btn bg-custom text-white w-100 mt-5 btnAdd">View More</button>
+                    
+                  </div>
             </div>
           </div>
-          <div class="card-deck mt-3 mt-md-5 mr-4 mr-md-0">
-            <div class="card shadow position-relative">
-              <div class="position-absolute mt-3 ml-3">
-                <i class="fab fa-canadian-maple-leaf fa-3x favorite favAdd"></i>
-              </div>
-              <img src="media/rastrello.jpg" class="card-img-top" alt="foto_revisione/darev/sakuras">
-              <div class="card-body mt-3">
-                <h5 class="card-title">Oust <span class="card-text float-right"><sup>€</sup>29,90</span></h5>
-                <p class="card-text mt-4">Pesticidi </p>
-                <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
-                <button class="btn bg-custom text-white w-100 mt-5 btnAdd">Vai all'annuncio</button>
-                <button class="btn bg-custom text-white w-100 mt-1 btnAdd btn btn-pref text-custom">Aggiungi al carrello</button>
-              </div>
+          
+          <div class="card shadow position-relative">
+            <div class="position-absolute mt-3 ml-3">
+              <i class="fab fa-canadian-maple-leaf fa-3x favorite favAdd"></i>
+            </div>
+            <img src="media/rastrello.jpg" class="card-img-top" alt="foto_revisione/darev/sakuras">
+            <div class="card-body mt-3">
+              <h5 class="card-title">For you <span class="card-text float-right"><sup>€</sup>40</span></h5>
+              <p class="card-text mt-4">Plants and Flowers </p>
+              
+              <button class="btn bg-custom text-white w-100 mt-5 btnAdd">View More</button>
+              
             </div>
             <div class="card shadow position-relative">
               <div class="position-absolute mt-3 ml-3">
@@ -237,233 +234,12 @@
               </div>
               <img src="media/rastrello.jpg" class="card-img-top" alt="foto_revisione/darev/sakuras">
               <div class="card-body mt-3">
-                <h5 class="card-title">Peonia <span class="card-text float-right"><sup>€</sup>30</span></h5>
-                <p class="card-text mt-4">Piante e Fiori </p>
-                <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
-                <button class="btn bg-custom text-white w-100 mt-5 btnAdd">Vai all'annuncio</button>
-                <button class="btn bg-custom text-white w-100 mt-1 btnAdd btn btn-pref text-custom">Aggiungi al carrello</button>
+                <h5 class="card-title">For you <span class="card-text float-right"><sup>€</sup>40</span></h5>
+                <p class="card-text mt-4">Plants and Flowers </p>
+                
+                <button class="btn bg-custom text-white w-100 mt-5 btnAdd">View More</button>
+                
               </div>
-            </div>
-            <div class="card shadow position-relative">
-              <div class="position-absolute mt-3 ml-3">
-                <i class="fab fa-canadian-maple-leaf fa-3x favorite favAdd"></i>
-              </div>
-              <img src="media/rastrello.jpg" class="card-img-top" alt="foto_revisione/darev/sakuras">
-              <div class="card-body mt-3">
-                <h5 class="card-title">Glicine <span class="card-text float-right"><sup>€</sup>10</span></h5>
-                <p class="card-text mt-4">Piante e Fiori </p>
-                <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
-                <button class="btn bg-custom text-white w-100 mt-5 btnAdd">Vai all'annuncio</button>
-                <button class="btn bg-custom text-white w-100 mt-1 btnAdd btn btn-pref text-custom">Aggiungi al carrello</button>
-              </div>
-            </div>
-          </div>
-          <div class="card-deck mt-3 mt-md-5 mr-4 mr-md-0">
-            <div class="card shadow position-relative">
-              <div class="position-absolute mt-3 ml-3">
-                <i class="fab fa-canadian-maple-leaf fa-3x favorite favAdd"></i>
-              </div>
-              <img src="media/rastrello.jpg" class="card-img-top" alt="foto_revisione/darev/sakuras">
-              <div class="card-body mt-3">
-                <h5 class="card-title">Lago artificiale <span class="card-text float-right"><sup>€</sup>1269</span></h5>
-                <p class="card-text mt-4">Ambienti </p>
-                <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
-                <button class="btn bg-custom text-white w-100 mt-5 btnAdd">Vai all'annuncio</button>
-                <button class="btn bg-custom text-white w-100 mt-1 btnAdd btn btn-pref text-custom">Aggiungi al carrello</button>
-              </div>
-            </div>
-            <div class="card shadow position-relative">
-              <div class="position-absolute mt-3 ml-3">
-                <i class="fab fa-canadian-maple-leaf fa-3x favorite favAdd"></i>
-              </div>
-              <img src="media/rastrello.jpg" class="card-img-top" alt="foto_revisione/darev/sakuras">
-              <div class="card-body mt-3">
-                <h5 class="card-title">Serra a due piani <span class="card-text float-right"><sup>€</sup>4500</span>
-                </h5>
-                <p class="card-text mt-4">Giardinaggio </p>
-                <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
-                <button class="btn bg-custom text-white w-100 mt-5 btnAdd">Vai all'annuncio</button>
-                <button class="btn bg-custom text-white w-100 mt-1 btnAdd btn btn-pref text-custom">Aggiungi al carrello</button>
-              </div>
-            </div>
-            <div class="card shadow position-relative">
-              <div class="position-absolute mt-3 ml-3">
-                <i class="fab fa-canadian-maple-leaf fa-3x favorite favAdd"></i>
-              </div>
-              <img src="media/rastrello.jpg" class="card-img-top" alt="foto_revisione/darev/sakuras">
-              <div class="card-body mt-3">
-                <h5 class="card-title">Vaso terracotta <span class="card-text float-right"><sup>€</sup>39,90</span></h5>
-                <p class="card-text mt-4">Vasi </p>
-                <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
-                <button class="btn bg-custom text-white w-100 mt-5 btnAdd">Vai all'annuncio</button>
-                <button class="btn bg-custom text-white w-100 mt-1 btnAdd btn btn-pref text-custom">Aggiungi al carrello</button>
-              </div>
-            </div>
-          </div>
-          <div class="card-deck mt-3 mt-md-5 mr-4 mr-md-0">
-            <div class="card shadow position-relative">
-              <div class="position-absolute mt-3 ml-3">
-                <i class="fab fa-canadian-maple-leaf fa-3x favorite favAdd"></i>
-              </div>
-              <img src="media/rastrello.jpg" class="card-img-top" alt="foto_revisione/darev/sakuras">
-              <div class="card-body mt-3">
-                <h5 class="card-title">Rastrello <span class="card-text float-right"><sup>€</sup>60</span></h5>
-                <p class="card-text mt-4">Giardinaggio </p>
-                <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
-                <button class="btn bg-custom text-white w-100 mt-5 btnAdd">Vai all'annuncio</button>
-                <button class="btn bg-custom text-white w-100 mt-1 btnAdd btn btn-pref text-custom">Aggiungi al carrello</button>
-              </div>
-            </div>
-            <div class="card shadow position-relative">
-              <div class="position-absolute mt-3 ml-3">
-                <i class="fab fa-canadian-maple-leaf fa-3x favorite favAdd"></i>
-              </div>
-              <img src="media/rastrello.jpg" class="card-img-top" alt="foto_revisione/darev/sakuras">
-              <div class="card-body mt-3">
-                <h5 class="card-title">Medicina <span class="card-text float-right"><sup>€</sup>37,80</span></h5>
-                <p class="card-text mt-4">Pesticidi </p>
-                <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
-                <button class="btn bg-custom text-white w-100 mt-5 btnAdd">Vai all'annuncio</button>
-                <button class="btn bg-custom text-white w-100 mt-1 btnAdd btn btn-pref text-custom">Aggiungi al carrello</button>
-              </div>
-            </div>
-            <div class="card shadow position-relative">
-              <div class="position-absolute mt-3 ml-3">
-                <i class="fab fa-canadian-maple-leaf fa-3x favorite favAdd"></i>
-              </div>
-              <img src="media/rastrello.jpg" class="card-img-top" alt="foto_revisione/darev/sakuras">
-              <div class="card-body mt-3">
-                <h5 class="card-title">Rastrello Argento <span class="card-text float-right"><sup>€</sup>89,90</span>
-                </h5>
-                <p class="card-text mt-4">Giardinaggio </p>
-                <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
-                <button class="btn bg-custom text-white w-100 mt-5 btnAdd">Vai all'annuncio</button>
-                <button class="btn bg-custom text-white w-100 mt-1 btnAdd btn btn-pref text-custom">Aggiungi al carrello</button>
-              </div>
-            </div>
-          </div>
-          <div class="card-deck mt-3 mt-md-5 mr-4 mr-md-0">
-            <div class="card shadow position-relative">
-              <div class="position-absolute mt-3 ml-3">
-                <i class="fab fa-canadian-maple-leaf fa-3x favorite favAdd"></i>
-              </div>
-              <img src="media/rastrello.jpg" class="card-img-top" alt="foto_revisione/darev/sakuras">
-              <div class="card-body mt-3">
-                <h5 class="card-title">Vaso <span class="card-text float-right"><sup>€</sup>125</span></h5>
-                <p class="card-text mt-4">Vasi </p>
-                <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
-                <button class="btn bg-custom text-white w-100 mt-5 btnAdd">Vai all'annuncio</button>
-                <button class="btn bg-custom text-white w-100 mt-1 btnAdd btn btn-pref text-custom">Aggiungi al carrello</button>
-              </div>
-            </div>
-            <div class="card shadow position-relative">
-              <div class="position-absolute mt-3 ml-3">
-                <i class="fab fa-canadian-maple-leaf fa-3x favorite favAdd"></i>
-              </div>
-              <img src="media/rastrello.jpg" class="card-img-top" alt="foto_revisione/darev/sakuras">
-              <div class="card-body mt-3">
-                <h5 class="card-title">Edera Velenosa <span class="card-text float-right"><sup>€</sup>9,80</span></h5>
-                <p class="card-text mt-4">Piante e Fiori </p>
-                <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
-                <button class="btn bg-custom text-white w-100 mt-5 btnAdd">Vai all'annuncio</button>
-                <button class="btn bg-custom text-white w-100 mt-1 btnAdd btn btn-pref text-custom">Aggiungi al carrello</button>
-              </div>
-            </div>
-            <div class="card shadow position-relative">
-              <div class="position-absolute mt-3 ml-3">
-                <i class="fab fa-canadian-maple-leaf fa-3x favorite favAdd"></i>
-              </div>
-              <img src="media/rastrello.jpg" class="card-img-top" alt="foto_revisione/darev/sakuras">
-              <div class="card-body mt-3">
-                <h5 class="card-title">Tulipani <span class="card-text float-right"><sup>€</sup>45</span></h5>
-                <p class="card-text mt-4">Piante e Fiori </p>
-                <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
-                <button class="btn bg-custom text-white w-100 mt-5 btnAdd">Vai all'annuncio</button>
-                <button class="btn bg-custom text-white w-100 mt-1 btnAdd btn btn-pref text-custom">Aggiungi al carrello</button>
-              </div>
-            </div>
-          </div>
-          <div class="card-deck mt-3 mt-md-5 mr-4 mr-md-0">
-            <div class="card shadow position-relative">
-              <div class="position-absolute mt-3 ml-3">
-                <i class="fab fa-canadian-maple-leaf fa-3x favorite favAdd"></i>
-              </div>
-              <img src="media/rastrello.jpg" class="card-img-top" alt="foto_revisione/darev/sakuras">
-              <div class="card-body mt-3">
-                <h5 class="card-title">Vaso terracotta <span class="card-text float-right"><sup>€</sup>60</span></h5>
-                <p class="card-text mt-4">Vasi </p>
-                <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
-                <button class="btn bg-custom text-white w-100 mt-5 btnAdd">Vai all'annuncio</button>
-                <button class="btn bg-custom text-white w-100 mt-1 btnAdd btn btn-pref text-custom">Aggiungi al carrello</button>
-              </div>
-            </div>
-            <div class="card shadow position-relative">
-              <div class="position-absolute mt-3 ml-3">
-                <i class="fab fa-canadian-maple-leaf fa-3x favorite favAdd"></i>
-              </div>
-              <img src="media/rastrello.jpg" class="card-img-top" alt="foto_revisione/darev/sakuras">
-              <div class="card-body mt-3">
-                <h5 class="card-title">Veleno <span class="card-text float-right"><sup>€</sup>30</span></h5>
-                <p class="card-text mt-4">Pesticidi </p>
-                <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
-                <button class="btn bg-custom text-white w-100 mt-5 btnAdd">Vai all'annuncio</button>
-                <button class="btn bg-custom text-white w-100 mt-1 btnAdd btn btn-pref text-custom">Aggiungi al carrello</button>
-              </div>
-            </div>
-            <div class="card shadow position-relative">
-              <div class="position-absolute mt-3 ml-3">
-                <i class="fab fa-canadian-maple-leaf fa-3x favorite favAdd"></i>
-              </div>
-              <img src="media/rastrello.jpg" class="card-img-top" alt="foto_revisione/darev/sakuras">
-              <div class="card-body mt-3">
-                <h5 class="card-title">Vaso ceramica <span class="card-text float-right"><sup>€</sup>10</span></h5>
-                <p class="card-text mt-4">Vasi </p>
-                <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
-                <button class="btn bg-custom text-white w-100 mt-5 btnAdd">Vai all'annuncio</button>
-                <button class="btn bg-custom text-white w-100 mt-1 btnAdd btn btn-pref text-custom">Aggiungi al carrello</button>
-              </div>
-            </div>
-          </div>
-          <div class="card-deck mt-3 mt-md-5 mr-4 mr-md-0">
-            <div class="card shadow position-relative">
-              <div class="position-absolute mt-3 ml-3">
-                <i class="fab fa-canadian-maple-leaf fa-3x favorite favAdd"></i>
-              </div>
-              <img src="media/rastrello.jpg" class="card-img-top" alt="foto_revisione/darev/sakuras">
-              <div class="card-body mt-3">
-                <h5 class="card-title">Albero di Salice <span class="card-text float-right"><sup>€</sup>3500</span></h5>
-                <p class="card-text mt-4">Piante e Fiori </p>
-                <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
-                <button class="btn bg-custom text-white w-100 mt-5 btnAdd">Vai all'annuncio</button>
-                <button class="btn bg-custom text-white w-100 mt-1 btnAdd btn btn-pref text-custom">Aggiungi al carrello</button>
-              </div>
-            </div>
-            <div class="card shadow position-relative">
-              <div class="position-absolute mt-3 ml-3">
-                <i class="fab fa-canadian-maple-leaf fa-3x favorite favAdd"></i>
-              </div>
-              <img src="media/rastrello.jpg" class="card-img-top" alt="foto_revisione/darev/sakuras">
-              <div class="card-body mt-3">
-                <h5 class="card-title">Tosaerba <span class="card-text float-right"><sup>€</sup>89,90</span></h5>
-                <p class="card-text mt-4">Macchinari </p>
-                <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
-                <button class="btn bg-custom text-white w-100 mt-5 btnAdd">Vai all'annuncio</button>
-                <button class="btn bg-custom text-white w-100 mt-1 btnAdd btn btn-pref text-custom">Aggiungi al carrello</button>
-              </div>
-            </div>
-            <div class="card shadow position-relative">
-              <div class="position-absolute mt-3 ml-3">
-                <i class="fab fa-canadian-maple-leaf fa-3x favorite favAdd"></i>
-              </div>
-              <img src="media/rastrello.jpg" class="card-img-top" alt="foto_revisione/darev/sakuras">
-              <div class="card-body mt-3">
-                <h5 class="card-title">Pezzo di terra <span class="card-text float-right"><sup>€</sup>899</span></h5>
-                <p class="card-text mt-4">Ambienti </p>
-                <p class="card-text"><small class="text-muted">Caricato da</small> Tizio Caio</p>
-                <button class="btn bg-custom text-white w-100 mt-5 btnAdd">Vai all'annuncio</button>
-                <button class="btn bg-custom text-white w-100 mt-1 btnAdd btn btn-pref text-custom">Aggiungi al carrello</button>
-              </div>
-            </div>
           </div>
         </div>
 
@@ -478,49 +254,24 @@
     <div class="container pb-5 mt-5">
       <div class="row mx-auto">
         <div class="col-12 col-md-6">
-
-          <h2 class="text-white text-center">pRESTO</h2>
+          <h2 class="text-white text-center">SM&AK</h2>
           <div class="d-flex justify-content-center text-left align-items-center">
-            <a href="https://it-it.facebook.com/" target="blank"><i
-                class="fab fa-facebook-square  p-2 text-white"></i></a>
-            <a href="https://www.instagram.com/?hl=it" target="blank"><i
-                class="fab fa-instagram-square  p-2 text-white"></i></a>
-            <a href="https://twitter.com/explore" target="blank"><i
-                class="fab fa-twitter-square  p-2 text-white"></i></a>
+            <a href="https://it-it.facebook.com/" target="blank"><i class="fab fa-facebook-square  p-2 text-white"></i></a>
+            <a href="https://www.instagram.com/?hl=it" target="blank"><i class="fab fa-instagram-square  p-2 text-white"></i></a>
+            <a href="https://twitter.com/explore" target="blank"><i class="fab fa-twitter-square  p-2 text-white"></i></a>
           </div>
           <hr class="my-3 hrfooter">
-          <div class="pt-3">
-            <p class="text-center text-white">P.IVA - 0192347658</p>
-          </div>
         </div>
         <div class="col-12 col-md-6">
           <div class="row mx-auto">
             <div class="col-12 col-md-4 p-2">
-              <h3 class="text-white text-center pb-3">Supporto</h3>
-              <ul>
-                <li class="text-white">Contatti</li>
-                <li class="text-white">FAQs</li>
-                <li class="text-white">Spedizioni</li>
-                <li class="text-white">Aiuto</li>
-              </ul>
+              <!-- Remove support section -->
             </div>
             <div class="col-12 col-md-4 p-2">
-              <h3 class="text-white text-center pb-3">Azienda</h3>
-              <ul>
-                <li class="text-white">Storia</li>
-                <li class="text-white">Carriere</li>
-                <li class="text-white">Termini e condizioni</li>
-                <li class="text-white">Privacy & Cookie Policy</li>
-              </ul>
+              <!-- Remove company section -->
             </div>
             <div class="col-12 col-md-4 p-2">
-              <h3 class="text-white text-center pb-3">Contatti</h3>
-
-              <p class="text-white ml-2 mb-0">+39 0123-4567890</p>
-              <p class="text-white ml-2 mb-0">344 1234567</p>
-              <p class="text-white ml-2 mb-0">help@presto.it</p>
-
-
+              <!-- Remove contact section -->
             </div>
           </div>
         </div>
